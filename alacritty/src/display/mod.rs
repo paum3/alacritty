@@ -1606,8 +1606,8 @@ fn compute_cell_size(config: &UiConfig, metrics: &crossfont::Metrics) -> (f32, f
     let offset_x = f64::from(config.font.offset.x);
     let offset_y = f64::from(config.font.offset.y);
     (
-        (metrics.average_advance + offset_x).floor().max(1.) as f32,
-        (metrics.line_height + offset_y).floor().max(1.) as f32,
+        (metrics.average_advance + offset_x).floor() as f32,
+        (metrics.line_height + offset_y).floor() as f32,
     )
 }
 
