@@ -121,9 +121,9 @@ impl Atlas {
         glyph: &RasterizedGlyph,
         active_tex: &mut u32,
     ) -> Result<Glyph, AtlasInsertError> {
-        if glyph.width > self.width || glyph.height > self.height {
-            return Err(AtlasInsertError::GlyphTooLarge);
-        }
+        // if glyph.width > self.width || glyph.height > self.height {
+        //     return Err(AtlasInsertError::GlyphTooLarge);
+        // }
 
         // If there's not enough room in current row, go onto next one.
         if !self.room_in_row(glyph) {
